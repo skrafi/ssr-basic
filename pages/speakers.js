@@ -2,13 +2,13 @@ import * as React from 'react';
 import axios from 'axios';
 import Link from "next/link";
 
-class Index extends React.Component {
+class Speakers extends React.Component {
 
   static async getInitialProps(){
-    return axios.get('http://localhost:4000/sessions').then((response)=>{
+    return axios.get('http://localhost:4000/speakers').then((response)=>{
       return {
         hasError: false,
-        sessionsData: response.data
+        speakersData: response.data
       }
     }).catch((error)=>{
       return {
@@ -23,18 +23,17 @@ class Index extends React.Component {
     this.state = {
       hasError: props.hasError,
       message: props.message,
-      sessionsData: props.sessionsData
+      speakersData: props.sessionsData
     }
   }
 
   render(){
-    return <div>
-      <Link href="speakers"><a>Speakers</a></Link>
-      <ul>
-      {this.props.sessionsData.map(session => <li key={session.sessionLevel_id}>{session.title}</li>)}
+    return<div>
+    <Link href="/"><a>Sessions</a></Link><ul>
+      {this.props.speakersData.map(speaker => <li key={speaker.id}>{speaker.firstnmae} {speaker.lastname}</li>)}
     </ul>
     </div>
   }
 }
 
-export default Index;
+export default Speakers;

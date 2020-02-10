@@ -1,0 +1,17 @@
+{
+  "speakers": [
+    {"id": 0,"firstname": "John", "lastname": "Snow"},
+    {"id": 1,"firstname": "Cersei", "lastname": "Lanister"},
+    {"id": 2,"firstname": "Ned", "lastname": "Stark"}
+  ],
+  "sessions": [
+    {
+      "title": "How js works",
+      "codeCampyYearId": 13,
+      "sessionLevel_id": 1,
+      "username": "",
+      "approved": true,
+      "description": "Description"
+    }
+  ]
+}
