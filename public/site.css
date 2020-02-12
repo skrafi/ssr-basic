@@ -5,3 +5,36 @@ img {
 .m3 {
   margin: 1rem;
 }
+
+.nav {
+  background-color: #283747;
+  
+}
+
+.jumbotron {
+  margin-bottom: 0;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:active {
+  color: skyblue;
+}
+
+.nav-link:hover {
+  color: white;
+  background-color: #34495E;
+  text-decoration: underline;
+}
+
+.content {
+  height: 67vh;
+  display: block;
+}
+
+.footer {
+  background-color: #283747;
+  color: white;
+}

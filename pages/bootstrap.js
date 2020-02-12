@@ -6,8 +6,6 @@ class bootstrap extends React.Component {
   render(){
     return (
       <div className="container">
-        <h4 className="card-title">Card title</h4>
-
         <div className="row">
         <div className="card m3">
           <img src="/speakers/snow.png" className="rounded img-thumbnail"/>
