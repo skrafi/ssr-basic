@@ -1,14 +1,13 @@
 import * as React from 'react';
 import axios from 'axios';
-import Link from "next/link";
 
-class Speakers extends React.Component {
+class Characters extends React.Component {
 
   static async getInitialProps(){
-    return axios.get('http://localhost:4000/speakers').then((response)=>{
+    return axios.get('http://localhost:4000/characters').then((response)=>{
       return {
         hasError: false,
-        speakersData: response.data
+        charactersData: response.data || []
       }
     }).catch((error)=>{
       return {
@@ -23,17 +22,17 @@ class Speakers extends React.Component {
     this.state = {
       hasError: props.hasError,
       message: props.message,
-      speakersData: props.sessionsData
+      charactersData: props.charactersData
     }
   }
 
   render(){
-    return<div>
-    <Link href="/"><a>Sessions</a></Link><ul>
-      {this.props.speakersData.map(speaker => <li key={speaker.id}>{speaker.firstnmae} {speaker.lastname}</li>)}
+    return<div className="content">
+    <ul>
+      {this.props.charactersData.map(character => <li key={character.id}>{character.firstnmae} {character.lastname}</li>)}
     </ul>
     </div>
   }
 }
 
-export default Speakers;
+export default Characters;

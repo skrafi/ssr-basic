@@ -1,14 +1,13 @@
 import * as React from 'react';
 import axios from 'axios';
-import Link from "next/link";
 
-class Sessions extends React.Component {
+class Places extends React.Component {
 
   static async getInitialProps(){
-    return axios.get('http://localhost:4000/sessions').then((response)=>{
+    return axios.get('http://localhost:4000/places').then((response)=>{
       return {
         hasError: false,
-        sessionsData: response.data
+        placesData: response.data
       }
     }).catch((error)=>{
       return {
@@ -23,18 +22,17 @@ class Sessions extends React.Component {
     this.state = {
       hasError: props.hasError,
       message: props.message,
-      sessionsData: props.sessionsData
+      placesData: props.placesData
     }
   }
 
   render(){
-    return <div>
-      <Link href="speakers"><a>Speakers</a></Link>
+    return <div className="content">
       <ul>
-      {this.props.sessionsData.map(session => <li key={session.sessionLevel_id}>{session.title}</li>)}
+      {this.props.placesData.map(place => <li key={place.id}>{place.name}</li>)}
     </ul>
     </div>
   }
 }
 
-export default Sessions;
+export default Places;

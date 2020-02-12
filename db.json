@@ -1,17 +1,21 @@
 {
-  "speakers": [
+  "characters": [
     {"id": 0,"firstname": "John", "lastname": "Snow"},
     {"id": 1,"firstname": "Cersei", "lastname": "Lanister"},
     {"id": 2,"firstname": "Ned", "lastname": "Stark"}
   ],
-  "sessions": [
+  "places": [
     {
-      "title": "How js works",
-      "codeCampyYearId": 13,
-      "sessionLevel_id": 1,
-      "username": "",
-      "approved": true,
-      "description": "Description"
+      "id": 0,
+      "name": "Castle Rock"
+    },
+    {
+      "id": 1,
+      "name": "Winterfell"
+    },
+    {
+      "id": 2,
+      "name": "The Wall"
     }
   ]
 }
