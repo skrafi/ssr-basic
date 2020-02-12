@@ -1,8 +1,8 @@
 {
   "characters": [
-    {"id": 0,"firstname": "John", "lastname": "Snow", "thumbnail": "snow.png"},
-    {"id": 1,"firstname": "Cersei", "lastname": "Lanister", "thumbnail": "cersei.jpeg"},
-    {"id": 2,"firstname": "Ned", "lastname": "Stark", "thumbnail": "ned.jpg"}
+    {"id": 0,"firstname": "John", "lastname": "Snow", "thumbnail": "snow.png","house": "Winterfell", "quotes": ["My watch is ended"], "age":14, "description": "Jon is described as having strong Stark features with a lean build, long face, dark brown hair and grey eyes.[5] Jon has the surname Snow (customarily used for illegitimate children in the North) and is resented by Ned's wife Catelyn, who views him as a constant reminder of Ned's infidelity.[4] Jon is the same age as Robb and enjoys a warm relationship with his siblings, particularly the tomboy Arya (who resembles Jon and like him does not feel like she fits in). Ned treats Jon as much like his other children as propriety and his honor will allow. Still, as somewhat of an outsider, Jon has learned to be independent and to fend for himself when necessary.[3] Jon idolizes his father, but is wounded by Ned's refusal to tell him about his mother.[6] At the beginning of the story, Jon adopts the albino direwolf that he names Ghost. He later finds that at times he can inhabit the wolf and share its experiences"},
+    {"id": 1,"firstname": "Cersei", "lastname": "Lanister", "house": "Lannister", "quotes": ["When you play the Game of Thrones you win, or you die."], "thumbnail": "cersei.jpeg"},
+    {"id": 2,"firstname": "Ned", "lastname": "Stark", "house": "Winterfell", "quotes": ["The only time a man can be brave is when he is afraid."], "thumbnail": "ned.jpg"}
   ],
   "places": [
     {

@@ -21,9 +21,42 @@ class Character extends React.Component {
   }
 
   render(){
-    return <div className="content">
-      <div>Details, {this.state.data.firstname} </div>
-      <img src={`/speakers/${this.state.data.thumbnail}`}/>
+    return <div className="content card">
+      <div className="row">
+        <img className="col-3 mr-5" src={`/speakers/${this.state.data.thumbnail}`}/>
+        <div className="col-8">
+          <div className="p-3">
+          <label className="col-form-label mr-3">
+            <b>Name: </b>
+          </label> 
+          {this.state.data.firstname} {this.state.data.lastname} 
+        </div>
+        <div className="p-3">
+          <label className="col-form-label mr-3">
+            <b>Age: </b>
+          </label> 
+          {this.state.data.age}
+        </div>
+        <div className="p-3">
+          <label className="col-form-label mr-3">
+            <b>House: </b>
+          </label> 
+          {this.state.data.house}
+        </div>
+        <div className="p-3">
+          <label className="col-form-label mr-3">
+            <b>Description: </b>
+          </label> 
+          {this.state.data.description}
+        </div>
+        <div className="p-3">
+          <label className="col-form-label mr-3">
+            <b>Quotes: </b>
+          </label> 
+          <q>{this.state.data.quotes[0]}</q>
+        </div>
+      </div>
+      </div>
     </div>
   }
 }

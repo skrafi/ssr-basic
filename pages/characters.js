@@ -34,6 +34,7 @@ class Characters extends React.Component {
           return (
             <li key={character.id}>
               {character.firstname} {character.lastname}
+              <div>
               <Link 
                 href={{
                   pathname: '/character', 
@@ -43,6 +44,7 @@ class Characters extends React.Component {
                   }} 
                 as={`/character/${character.id}`}
               >See more</Link>
+              </div>
             </li>
           );
         })}
