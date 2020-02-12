@@ -1,5 +1,6 @@
 import * as React from 'react';
 import axios from 'axios';
+import Link from "next/link";
 
 class Characters extends React.Component {
 
@@ -27,10 +28,25 @@ class Characters extends React.Component {
   }
 
   render(){
-    return<div className="content">
-    <ul>
-      {this.props.charactersData.map(character => <li key={character.id}>{character.firstnmae} {character.lastname}</li>)}
-    </ul>
+    return <div className="content">
+      <ul>
+        {this.props.charactersData.map(character => {
+          return (
+            <li key={character.id}>
+              {character.firstname} {character.lastname}
+              <Link 
+                href={{
+                  pathname: '/character', 
+                  query: {
+                    characterId: character.id
+                  }
+                  }} 
+                as={`/character/${character.id}`}
+              >See more</Link>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   }
 }

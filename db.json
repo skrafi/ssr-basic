@@ -1,8 +1,8 @@
 {
   "characters": [
-    {"id": 0,"firstname": "John", "lastname": "Snow"},
-    {"id": 1,"firstname": "Cersei", "lastname": "Lanister"},
-    {"id": 2,"firstname": "Ned", "lastname": "Stark"}
+    {"id": 0,"firstname": "John", "lastname": "Snow", "thumbnail": "snow.png"},
+    {"id": 1,"firstname": "Cersei", "lastname": "Lanister", "thumbnail": "cersei.jpeg"},
+    {"id": 2,"firstname": "Ned", "lastname": "Stark", "thumbnail": "ned.jpg"}
   ],
   "places": [
     {

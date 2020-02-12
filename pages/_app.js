@@ -1,5 +1,5 @@
 import * as React from 'react';
-import  App, { Container } from 'next/app';
+import  App from 'next/app';
 import Layout from '../src/Layout';
 
 class MyApp extends App {
@@ -14,11 +14,11 @@ class MyApp extends App {
   render(){
     const {Component, pageProps} = this.props;
     return (
-      <Container>
+      <React.Fragment>
         <Layout>
           <Component {...pageProps}/>
         </Layout>
-      </Container>
+      </React.Fragment>
     )
   }
 }
